@@ -1,8 +1,9 @@
 import React from 'react';
+import Link from 'next/link';
 
 const Footer: React.FC = () => {
   return (
-    <div className="footer-container max-w-8xl">
+    <div className="footer-container max-w-8xl mt-16">
       <div className="footer-section">
         <img src="/logo.svg" alt="Logo" width="200px" />
         <div className="social-media-links">
@@ -29,7 +30,9 @@ const Footer: React.FC = () => {
       </div>
       <div className="footer-section align-right text-gray-500"></div>
       <div className="footer-section align-right text-gray-500"></div>
-      <div className="footer-section align-right text-gray-500"></div>
+      <div className="footer-section align-right text-gray-300">
+        <Link href="/rodo">Polityka prywatności</Link>
+      </div>
 
       <style jsx>{`
         .footer-container {

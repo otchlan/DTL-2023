@@ -1,0 +1,2 @@
+żeby odpalić test:  
+	npx jest MyFormComponent.test.tsx
