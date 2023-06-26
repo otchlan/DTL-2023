@@ -40,14 +40,9 @@ const Navbar = () => {
                     Centrum SI
                   </button>
                 </Link>
-                <Link href="/rekrutacja">
+                <Link href="/oferta">
                   <button className="cursor-pointer rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-white">
-                    Rekrutacja
-                  </button>
-                </Link>
-                <Link href="/uslugi">
-                  <button className="cursor-pointer rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-white">
-                    Usługi
+                    Oferta
                   </button>
                 </Link>
                 <Link href="/dao">

@@ -18,7 +18,9 @@ const CardCSI = () => {
       </div>
       <div className="card">
         <Link href="/d_bc">
-          <button className="card-button">Bootcamp</button>
+          <button className="card-button">
+            <img src="/ls_logo_trans.png" alt="Hak Image" className="button-image" />
+          </button>
         </Link>
       </div>
       <style jsx>{`

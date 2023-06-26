@@ -1,7 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, ChangeEvent, FormEvent } from 'react';
+
+// Define the type for the record object
+type Record = {
+  id: string;
+  fields: {
+    name: string;
+    lastname: string;
+    email: string;
+    // Add additional fields as needed
+  };
+};
 
 const AirtableData = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<Record[]>([]); // Specify the type for data state
   const [newRecord, setNewRecord] = useState({ name: '', lastname: '', email: '' });
 
   const fetchAirtableData = async () => {
@@ -30,11 +41,11 @@ const AirtableData = () => {
     fetchAirtableData();
   }, []);
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setNewRecord({ ...newRecord, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {

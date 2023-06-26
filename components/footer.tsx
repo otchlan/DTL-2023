@@ -28,10 +28,18 @@ const Footer: React.FC = () => {
         </div>
         <p className="contact-text align-right text-gray-500">kontakt@deeptechlabs.pl</p>
       </div>
-      <div className="footer-section align-right text-gray-500"></div>
-      <div className="footer-section align-right text-gray-500"></div>
+      <div className="footer-section align-right text-gray-500">
+       
+      </div>
       <div className="footer-section align-right text-gray-300">
-        <Link href="/rodo">Polityka prywatności</Link>
+         
+      </div>
+      <div className="footer-section align-right text-gray-300">
+        <ul>
+        <li><Link href="/rodo">Polityka prywatności</Link></li>
+
+        <li><Link href="/kariera">Kariera</Link></li>
+        </ul>
       </div>
 
       <style jsx>{`

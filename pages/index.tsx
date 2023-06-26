@@ -1,16 +1,10 @@
-import Balancer from "react-wrap-balancer";
 import { motion } from "framer-motion";
-import { DEPLOY_URL, FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/constants";
-import { Github, Twitter } from "@/components/shared/icons";
-import WebVitals from "@/components/home/web-vitals";
-import ComponentGrid from "@/components/home/component-grid";
-import Image from "next/image";
+import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/constants";
 import AboutUs from "@/components/about-us";
 import GridList from "@/components/grid-list/grid-list";
-import Contact from "@/components/contact";
 import Recruitment from "@/components/recruitment";
 import Footer from "@/components/footer";
-import YouTubeVideo from "@/components/yt";
+import YouTubeVideo from "@/components/YouTubeVideo";
 
 export default function Home() {
   return (
@@ -29,25 +23,21 @@ export default function Home() {
           },
         }}
       >
-        <div className={"py-8"}>
-       
-          <YouTubeVideo />
-      
+        <div className="py-8">
+        <YouTubeVideo />
+
           <motion.p
             className="mt-6 text-center text-gray-500 md:text-xl"
             variants={FADE_DOWN_ANIMATION_VARIANTS}
           >
-            <Balancer>Nasze technologie. Twoja przewaga.</Balancer>
+            Nasze technologie. Twoja przewaga.
           </motion.p>
-          <motion.div
-            className="mx-auto mt-6 flex items-center justify-center space-x-5"
-            variants={FADE_DOWN_ANIMATION_VARIANTS}
-          >
-          </motion.div>
         </div>
         <AboutUs />
+        <div className="text-gray-500">
+          Tu mają być jakieś aktualności i może jakaś gra żeby poznać kim jesteś i co ma się w tym boxie wyświetlać - Ten box jest przeznaczony tylko dla ciebie - mapa strony?
+        </div>
         <GridList />
-        <Recruitment />
         <Footer />
       </motion.div>
     </>

@@ -58,18 +58,17 @@ export default function Home() {
           </motion.h1>
 
           <div className="text-center text-gray-500 mt-16 md:text-xl">
-            Centum SI to społeczność stawiająca sobie za cel aktywizację
-            studentów i młodzieży lubelskich uczelni oraz szkół w celu badań i
-            pogłębiania wiedzy z dziedziny sztucznej inteligencji. Jego
-            realizacja obejmuje badania naukowe (tak zwany research) branży i
+            Centum SI to społeczność stawiająca sobie za cel aktywizację w pierwszej kolejności
+            pracowników firm i administaracji, studentów i młodzieży z Lublina w celu badań oraz
+            pogłębiania wiedzy z dziedziny sztucznej inteligencji. Nasze
+            realizacje obejmują badania naukowe (tak zwany research) branży i
             dziedziny szeroko rozumianej sztucznej inteligencji, organizowanie
             warsztatów, tworzenie i publikowanie artykułów naukowych, prowadzenie
             kanałów naukowych oraz prezentowanie się na konferencjach, a w
             przyszłości także badania nad technicznymi aspektami SI. Chcemy
-            zainspirować młodzież do aktywnego rozwoju w tej dziedzinie, pokazać
-            im jednocześnie w jaki sposób prowadzone są działania biznesowe i
+            zainspirować społeczeństwo Lublina i województwa Lubelskiego do aktywnego rozwoju w tej dziedzinie, jednocześnie pokazać w jaki sposób prowadzone są działania biznesowe i
             cykle technologiczne, chcemy promować naukę i technologię oraz
-            popularyzować sztuczną inteligencję wśród społeczności lokalnej,
+            popularyzować sztuczną inteligencję,
             budować świadomość i kapitał intelektualny.
           </div>
 
