@@ -24,6 +24,20 @@ const GridList = () => {
           description="Zastosowanie nowoczesnych technologii informatycznych i narzędzi do automatyzacji i optymalizacji kluczowych procesów biznesowych w firmie. Dzięki temu możliwe jest zwiększenie efektywności, redukcja kosztów oraz usprawnienie pracy zespołów. Automatyzacja i optymalizacja procesów pozwala na szybszą i bardziej precyzyjną realizację zadań, a także zapewnia lepszą kontrolę nad procesami biznesowymi. Usługa ta jest szczególnie ważna dla firm, które chcą pozostać konkurencyjne i rozwijać swoją działalność w dynamicznym środowisku biznesowym."
         />
       </div>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+        <Card
+          title="Dodać tu case study?"
+          description=" minimalizując ryzyko opóźnień, przekroczeń budżetu i innych problemów."
+        />
+        <Card
+          title="Wprowadzanie innowacji do przedsiębiorstw "
+          description="Usługa polega na wsparciu firm w procesie wdrażania nowych pomysłów, technologii i procesów w celu poprawy efektywności działania oraz zwiększenia konkurencyjności na rynku. Usługa ta może obejmować analizę potrzeb i możliwości firmy, wybór odpowiednich rozwiązań, zaprojektowanie strategii wdrażania, szkolenia pracowników oraz monitorowanie wyników i dostosowywanie działań. Wprowadzanie innowacji może dotyczyć różnych obszarów działalności, takich jak produkcja, sprzedaż, marketing, czy zarządzanie."
+        />
+        <Card
+          title="Automatyzacja i optymalizacja procesów w przedsiębiorstwach"
+          description="Zastosowanie nowoczesnych technologii informatycznych i narzędzi do automatyzacji i optymalizacji kluczowych procesów biznesowych w firmie. Dzięki temu możliwe jest zwiększenie efektywności, redukcja kosztów oraz usprawnienie pracy zespołów. Automatyzacja i optymalizacja procesów pozwala na szybszą i bardziej precyzyjną realizację zadań, a także zapewnia lepszą kontrolę nad procesami biznesowymi. Usługa ta jest szczególnie ważna dla firm, które chcą pozostać konkurencyjne i rozwijać swoją działalność w dynamicznym środowisku biznesowym."
+        />
+      </div>
     </div>
   );
 };

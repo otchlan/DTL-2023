@@ -8,6 +8,8 @@ const Navbar = () => {
   const { data: session, status } = useSession();
   const scrolled = useScroll();
 
+/* TODO Dodać poniżej navbaru informacje dla osoby - https://codepen.io/Coding_Journey/pen/yWjWKd */
+
   return (
     <nav
       className={`fixed top-0 w-full  ${
