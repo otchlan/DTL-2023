@@ -33,7 +33,7 @@ export default function MyApp({
       <RWBProvider>
         <Navbar />
         <div className={cx(sfPro.variable, inter.variable)}>
-          <main className="w-f ull flex flex-col items-center justify-center bg-black py-32">
+          <main className="w-full flex flex-col items-center justify-center bg-black py-32">
             <Component {...pageProps} />
           </main>
         </div>

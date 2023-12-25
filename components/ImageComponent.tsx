@@ -22,7 +22,7 @@ const MediaComponent: React.FC<MediaComponentProps> = ({ src, alt }) => {
           onClick={() => router.push('/oferta')}
           style={{
             cursor: 'pointer',
-            boxShadow: '-8px 0px 15px 0px #05ff9a',
+            boxShadow: '-0px 0px 20px 0px #05ff9a',
             borderRadius: '1%',
             marginBottom: "24px"
           }}
@@ -39,7 +39,7 @@ const MediaComponent: React.FC<MediaComponentProps> = ({ src, alt }) => {
           onClick={() => router.push('/oferta')}
           style={{
             cursor: 'pointer',
-            boxShadow: '-8px 0px 15px 0px #05ff9a',
+            boxShadow: '-0px 0px 15px 0px #05ff9a',
             borderRadius: '1%',
             marginBottom: "24px"
           }}

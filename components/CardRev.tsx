@@ -14,7 +14,7 @@ const CardRev: React.FC<CardProps> = ({ name, imageUrl, href, description }) => 
     <div className={styles.card}>
     <Link href={href}>
       <div className={styles.cardImage }>
-        <img src={imageUrl} alt={name} />
+        <img className={styles.image} src={imageUrl} alt={name} />
       </div>
       <div className={styles.cardDescription}>
         <p>{description}</p>

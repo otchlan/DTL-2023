@@ -8,7 +8,7 @@
 
 
 .cards-container {
-  width: 100%; 
+  width: 96%; 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -67,6 +67,15 @@
     margin: 0 auto; /* Centering block elements */
 }
 
+@media (max-width: 768px) {
+
+  .glowText {
+    width: 70%;
+    font-size: 46px;
+  }
+
+}
+
 .glowText_x {
     width: 60%;
     color: #fff; /* Setting the text color */
@@ -75,6 +84,7 @@
     text-stroke: 1px black; /* Standard property but might not be supported in all browsers */
     text-align: center; /* To ensure the text itself is centered, in case it wraps to multiple lines */
     margin: 0 auto; /* Centering block elements */
+    margin-bottom: 15px;
 }
 
 .glowText_x:hover {
@@ -107,4 +117,14 @@
   margin-top: 120px;
   text-align: center;
   color: white;
+}
+
+@media (max-height: 768px) {
+
+  .glowText_x {
+
+    font-size: 20px;
+
+  }
+
 }

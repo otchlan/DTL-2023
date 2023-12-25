@@ -2,11 +2,20 @@ import { useState } from "react";
 import { useSession } from "next-auth/react";
 import { useScroll } from "framer-motion";
 import Link from "next/link";
+import styles from "../styles/navbar.module.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { data: session, status } = useSession();
   const scrolled = useScroll();
+
+  const menuStyles = {
+    transform: isOpen ? 'translateY(0%)' : 'translateY(100%)',
+    opacity: isOpen ? 1 : 0,
+    transition: 'transform 0.3s ease',
+  };
+
+
 
   return (
     <nav
@@ -65,10 +74,37 @@ const Navbar = () => {
               className="inline-flex items-center justify-center rounded-md  p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
               aria-controls="mobile-menu"
               aria-expanded="false"
-            ></button>
+            >
+              <img
+                src="/menuIconWhite.png"
+                className="h-full"
+                alt="menuIcon"
+              />
+            </button>
           </div>
         </div>
       </div>
+      {isOpen && (
+        <div className="md:hidden mt-2 text-center" style={menuStyles}>
+          <div className="flex flex-col items-center">
+            <button className="text-white py-2 text-gray-300 hover:text-white">
+              <a href="/launchpad">Launchpad</a>
+            </button>
+            <button className="text-white py-2 text-gray-300 hover:text-white">
+              <a href="/centrumsi" className="block text-white py-2 text-gray-300 hover:text-white">Centrum SI</a>
+            </button>
+            <button className="text-white py-2 text-gray-300 hover:text-white">
+              <a href="/oferta" className="block text-white py-2 text-gray-300 hover:text-white">Oferta</a>
+            </button>
+            <button className="text-white py-2 text-gray-300 hover:text-white">
+              <a href="/dao" className="block text-white py-2 text-gray-300 hover:text-white">DAO</a>
+            </button>
+            <button className="text-white py-2 text-gray-300 hover:text-white">
+              <a href="/blog" className="block text-white py-2 text-gray-300 hover:text-white">Blog</a>
+            </button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

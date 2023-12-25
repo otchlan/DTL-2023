@@ -46,14 +46,14 @@ const Footer: React.FC = () => {
           60% przeznaczonych jest na młodych naukowców
         
       </div>
-      <div className="footer-section align-right text-gray-500 info-section">
-           OORGANIZACJA deeptechlabs - LABORATORIUM ZAAWANSOWANYCH TECHNOLOGII JEST PARTNEREM FIRMY GLOBERGY SP. Z O. O.
+      <div className="footer-section align-right text-gray-500 info-section break-all">
+           Portfel ERC20:
            <br />
-           NIP: 5170413324
+           0x94D772d31804983d2Dd2d9D12F34803C41334dDD
            <br />
-           KRS: 0000881725
+           Polygonscan:
            <br />
-           REGON: 388067029
+           https://polygonscan.com/token/0xa83082b6bdb9e94c3bf25f5aab6e9a35bb7a8f82?a=0x94d772d31804983d2dd2d9d12f34803c41334ddd
       </div>
       <div className="footer-section align-right text-gray-300">
         <ul>
@@ -66,13 +66,15 @@ const Footer: React.FC = () => {
       <style jsx>{`
         .footer-container {
           display: flex;
-          width: 96%;
+          flex-direction: row;
+          flex-wrap: wrap;
+          width: 100vw;
           padding: 2%;
         }
 
         .footer-section {
           width: 25%;
-          padding: 5px;
+          padding: 15px;
         }
 
         .info-section {
@@ -81,7 +83,7 @@ const Footer: React.FC = () => {
         }
 
         .align-right {
-          text-align: right;
+          text-align: left;
         }
 
         .social-media-links {
@@ -102,6 +104,14 @@ const Footer: React.FC = () => {
           margin-top: 30px;
           text-align: left;
           color: gray-500;
+        }
+
+        @media (max-width: 768px) {
+
+          .footer-section {
+            width: 50%;
+          }
+
         }
       `}</style>
     </div>

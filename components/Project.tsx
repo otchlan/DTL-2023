@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Project.module.css';
+import Dropdownv2 from '@/components/Dropdownv2';
+import DiscussSection from '@/components/DiscussSection';
 
 
 const StackedContainers: React.FC = () => {
@@ -7,6 +9,7 @@ const StackedContainers: React.FC = () => {
 
   const first_task = "Opracowanie interfejsu użytkownika dla panelu administratora z integracją asystenta AI.";
   const tasks = [
+      "Opracowanie interfejsu użytkownika dla panelu administratora z integracją asystenta AI.",
       "Zintegrować API płatności dla obsługi transakcji.",
       "Stworzyć system rejestracji i logowania dla użytkowników.",
       "Przetestować wydajność i bezpieczeństwo platformy.",
@@ -27,6 +30,12 @@ const StackedContainers: React.FC = () => {
       "Zorganizować szkolenia dla zespołu w zakresie najnowszych technologii blockchain.",
       "Zaprojektować system nagród dla aktywnych i lojalnych użytkowników."
   ];
+
+  const [selectedTask, setSelectedTask] = useState(0);
+
+  const handleTaskClick = (index: number) => {
+    setSelectedTask(index);
+  };
 
 
   return (
@@ -121,15 +130,37 @@ const StackedContainers: React.FC = () => {
       <div className={styles.bottomContainer}>
               <div className={styles.sideBySideOneDiv}>
               <ul className={styles.listContainer}>
-                         <p className={styles.highlighted}> {first_task} </p>
                          {tasks.map((task, index) => (
-                             <p key={index} className={styles.taskItem}>{task}</p>
+                             <p key={index} className={`${styles.taskItem} ${selectedTask === index ? styles.highlighted : ''}`} onClick={() => handleTaskClick(index)}>{task}</p>
                          ))}
                      </ul>
               </div>
           <div className={styles.sideBySideTwoDiv}>
-            <img src="/lanch.png" alt="Lanch Image" />
-            
+            <div className={styles.descriptionContainer}>
+              <p className={styles.title}>Opracowanie interfejsu użytkownika dla panelu administratora z integracją asystenta AI</p>
+              <p className={styles.subtitle}>Opis zadania:</p>
+              <p className={styles.content}>Celem tego zadania jest stworzenie nowoczesnego, intuicyjnego i responsywnego interfejsu użytkownika dla panelu administratora, który pozwoli na efektywną komunikację z wbudowanym asystentem AI.</p>
+              <p className={styles.subtitle}>Szczegółowe wymagania</p>
+              <Dropdownv2 title="Title" description="Description" />
+              <p className={styles.subtitle}>Wybierz rodzaj rozliczenia</p>
+              <div className={styles.settlement}>
+                <div className={styles.settleBox}>
+                  <p className={styles.boxTitle}>Krypto/FIAT</p>
+                  <p className={styles.boxContent}>200 DTL</p>
+                  <p className={styles.boxContent}>500 zł</p>
+                </div>
+                <div className={styles.settleBox}>
+                  <p className={styles.boxTitle}>Krypto</p>
+                  <p className={styles.boxContent}>200 DTL</p>
+                  <p className={styles.boxContent}>0.08 ETH</p>
+                </div>
+                <div className={styles.settleBox}>
+                  <p className={styles.boxTitle}>Krypto</p>
+                  <p className={styles.boxContent}>520 DTL</p>
+                </div>
+              </div>
+              <DiscussSection title="Title" description="Description" />
+            </div> 
           </div>
         </div>
       </div>

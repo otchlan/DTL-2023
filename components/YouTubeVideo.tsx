@@ -33,9 +33,9 @@ useEffect(() => {
       style={{
         display: "flex",
         justifyContent: "center",
-        margin: 0,
+        margin: "auto",
         alignItems: "center",
-        width: "100%",
+        width: "90vw",
       }}
     ></div>
   );

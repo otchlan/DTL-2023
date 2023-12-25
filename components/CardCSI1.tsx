@@ -26,6 +26,7 @@ const CardCSI = () => {
       <style jsx>{`
         .card-container {
           display: flex;
+          flex-wrap: wrap;
           width: 96%;
           margin: 0 auto;
         }
@@ -35,9 +36,9 @@ const CardCSI = () => {
           border-radius: 8px;
           border: 5px solid #08fc9c;
           background-color: #212121;
-          margin-right: 2%;
-          margin-left: 2%;
+          margin: 2%;
           width: 30%;
+          min-width: 200px;
         }
         .card-button {
           width: 100%;
@@ -55,6 +56,7 @@ const CardCSI = () => {
         .button-image {
           width: 180px;
           height: 180px;
+          min-height: 180px;
           transition: transform 0.5s;
         }
         .button-image:hover {

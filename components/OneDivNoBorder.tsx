@@ -8,7 +8,7 @@ interface SectionProps {
 
 const Section: React.FC<SectionProps> = ({ content }) => {
   return (
-      <div style={{ width: "80%", marginRight: "2%", backgroundColor: "black", padding: "16px", borderRadius: "8px", justifyContent: "center", margin: "16px auto 0", display: "flex" }}>
+      <div style={{ width: "80vw", marginRight: "2%", backgroundColor: "black", padding: "16px", borderRadius: "8px", justifyContent: "center", margin: "16px auto 0", display: "flex" }}>
         <div className="text-center text-white md:text-xl">
           {content}
         </div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const NEXT_PUBLIC_ENDPOINT = 'https://api.airtable.com/v0/appIlVPr2xDeAuEy1/tblD1SYGDy8ChNg29';
+const NEXT_PUBLIC_ENDPOINT = process.env.AIRTABLE_ENDPOINT;
 const AIRTABLE_API_KEY = process.env.NEXT_PUBLIC_KEY;
 console.log("API Key:", AIRTABLE_API_KEY);
 
@@ -51,8 +51,36 @@ const AirtableForm: React.FC<ButtonProps> = ({ buttonLabels, displayTexts }) => 
       });
   };
 
-    const submitToAirtable = async (data: any) => {
-            try {
+    const submitToAirtable = async (e:any) => {
+
+      const dataToSend = {
+      fields: {
+        Imie: formData.Imie,
+        Nazwisko: formData.Nazwisko,
+        Email: formData.Email,
+        Numer_tel: formData.Numer_tel,
+        Wiadomosc_do_nas: formData.Wiadomosc_do_nas,
+      },
+    };
+      console.log(formData);
+      try {
+      // Make a POST request to Airtable
+      const response = await fetch('/api/sendDataToAirTable', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dataToSend),
+      });
+      setFormData({Imie: '',
+        Nazwisko: '',
+        Email: '',
+        Numer_tel: '',
+        Wiadomosc_do_nas: ''});
+      } catch (error) {
+      console.error('Error sending data:', error);
+    };
+        {/*    try {
                 const response = await axios.post(NEXT_PUBLIC_ENDPOINT, {
                     fields: data
                 }, {
@@ -65,12 +93,15 @@ const AirtableForm: React.FC<ButtonProps> = ({ buttonLabels, displayTexts }) => 
         } catch (error) {
             console.error('Error sending data to Airtable:', error);
         }
-      }
+      } */}
 
+}
     const fontSize = '16px'; 
 
+
+
    return (
-    <div style={{ width: '96%', margin: '0 auto' }}>
+    <div style={{ width: '96vw', margin: '0 auto' }}>
       <div style={{ 
         display: 'flex', 
         flexDirection: 'column', 
@@ -246,3 +277,4 @@ const AirtableForm: React.FC<ButtonProps> = ({ buttonLabels, displayTexts }) => 
 };
 
 export default AirtableForm;
+
